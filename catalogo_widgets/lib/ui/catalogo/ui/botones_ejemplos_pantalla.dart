@@ -17,6 +17,8 @@ class BotonesEjemplosPantalla extends StatelessWidget {
             texto: 'Ruta de la cascada',
             variante: VarianteEtiqueta.normal,
           ),
+          SizedBox(height: 24),
+          //_BotonPsoeta(),
         ],
       ),
     );

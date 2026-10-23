@@ -1,4 +1,6 @@
 import 'package:catalogo_widget/ui/core/ui/etiqueta_catalogo.dart';
+import 'package:catalogo_widget/ui/core/ui/texto_jerarquico.dart';
+import 'package:catalogo_widget/ui/core/ui/texto_resumen.dart';
 import 'package:flutter/material.dart';
 
 class TextEjemplosPantalla extends StatelessWidget {
@@ -17,6 +19,11 @@ class TextEjemplosPantalla extends StatelessWidget {
             texto: 'Ruta de la cascada',
             variante: VarianteEtiqueta.normal,
           ),
+          TextoJerarquico(texto: "Título", tipo: TipoTexto.titulo),
+          TextoJerarquico(texto: "Subtítulo", tipo: TipoTexto.subtitulo),
+          TextoJerarquico(texto: "Cuerpo de texto", tipo: TipoTexto.cuerpo),
+          TextoResumen(texto: "texto", maxLines: 1),
+          TextoResumen(texto: "texto", maxLines: 2, centrado: true),
         ],
       ),
     );
