@@ -1,5 +1,4 @@
 import 'package:catalogo_widget/ui/catalogo/ui/catalogo_pantalla.dart';
-import 'package:catalogo_widget/ui/catalogo/ui/text_ejemplos_pantalla.dart';
 import 'package:flutter/material.dart';
 
 void main() {
