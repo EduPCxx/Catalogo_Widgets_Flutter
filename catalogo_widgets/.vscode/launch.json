@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "${workspaceFolder}/bin/js-debug/index.html",
+            "runtimeArgs": [
+                "--disable-web-security"
+            ],
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "build"
+        }
+    ]
+}

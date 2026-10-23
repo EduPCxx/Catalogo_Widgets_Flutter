@@ -1,4 +1,3 @@
-import 'package:catalogo_widget/ui/core/ui/etiqueta_catalogo.dart';
 import 'package:flutter/material.dart';
 
 class IconEjemplosPantalla extends StatelessWidget {
@@ -10,12 +9,25 @@ class IconEjemplosPantalla extends StatelessWidget {
       appBar: AppBar(title: const Text('Ejemplos de Icons')),
       body: ListView(
         padding: const EdgeInsets.all(16),
-        children: const [
-          EtiquetaCatalogo(texto: 'Ruta de la cascada'),
-          SizedBox(height: 16),
-          EtiquetaCatalogo(
-            texto: 'Ruta de la cascada',
-            variante: VarianteEtiqueta.normal,
+        children: [
+          Center(
+            child: SizedBox(
+              child: IconButton(
+                icon: Icon(Icons.warning),
+                onPressed: null,
+                tooltip: 'Quina vergonya',
+              ),
+            ),
+          ),
+          FilledButton.icon(
+            onPressed: () {},
+            icon: Icon(Icons.wifi_off),
+            label: Text('GVA posans ya el intenet ostia'),
+            style: FilledButton.styleFrom(
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+            ),
           ),
         ],
       ),

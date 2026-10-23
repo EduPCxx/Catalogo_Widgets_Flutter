@@ -17,7 +17,7 @@ class ImagenRemota extends StatelessWidget {
   }) : assert(
          esDecorativa ||
              (descripcionSemantica != null && descripcionSemantica.isNotEmpty),
-         'Si la imatge no és decorativa, la descripció no pot estar buida.',
+         'Si la imagen no es decorativa, la descripción no puede estar vacía',
        );
 
   @override

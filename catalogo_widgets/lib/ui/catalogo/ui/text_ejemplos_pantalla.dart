@@ -13,6 +13,33 @@ class TextEjemplosPantalla extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: const [
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'TextoJerarquico',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Text('Muestra texto con tres niveles de jerarquía.'),
+                  Text(
+                    'texto: obligatorio. tipo: opcional; por defecto, cuerpo.',
+                  ),
+                  SelectableText(
+                    "TextoJerarquico(texto: 'Ruta del río', tipo: TipoTexto.titulo)",
+                    style: TextStyle(fontFamily: 'monospace'),
+                  ),
+                  SizedBox(height: 12),
+                  TextoJerarquico(
+                    texto: 'Ruta del río',
+                    tipo: TipoTexto.titulo,
+                  ),
+                ],
+              ),
+            ),
+          ),
           EtiquetaCatalogo(texto: 'Ruta de la cascada'),
           SizedBox(height: 16),
           EtiquetaCatalogo(
@@ -23,7 +50,7 @@ class TextEjemplosPantalla extends StatelessWidget {
           TextoJerarquico(texto: "Subtítulo", tipo: TipoTexto.subtitulo),
           TextoJerarquico(texto: "Cuerpo de texto", tipo: TipoTexto.cuerpo),
           TextoResumen(texto: "texto", maxLines: 1),
-          TextoResumen(texto: "texto", maxLines: 2, centrado: true),
+          TextoResumen(texto: "texto centrado", maxLines: 2, centrado: true),
         ],
       ),
     );

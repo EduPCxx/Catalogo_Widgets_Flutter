@@ -18,9 +18,31 @@ class BotonesEjemplosPantalla extends StatelessWidget {
             variante: VarianteEtiqueta.normal,
           ),
           SizedBox(height: 24),
-          //_BotonPsoeta(),
+          _BotonPsoeta(),
         ],
       ),
+    );
+  }
+}
+
+class _BotonPsoeta extends StatelessWidget {
+  const _BotonPsoeta();
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Deficiencia mental cofirmada')),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
+        textStyle: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+      ),
+      child: const Text('PSOETA'),
     );
   }
 }
