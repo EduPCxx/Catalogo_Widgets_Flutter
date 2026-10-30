@@ -7,6 +7,9 @@ import 'icon_ejemplos_pantalla.dart';
 import 'botones_ejemplos_pantalla.dart';
 import 'placeholder_ejemplos_pantalla.dart';
 import 'scaffold_ejemplos_pantalla.dart';
+import '../../../data/repositories/articulos_repository.dart';
+import '../../../data/services/articulos_local_service.dart';
+import '../../prestamos/ui/ejemplo_datos_pantalla.dart';
 
 class CatalogoPantalla extends StatelessWidget {
   const CatalogoPantalla({super.key});
@@ -97,6 +100,22 @@ class CatalogoPantalla extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute<void>(
                   builder: (context) => const Contenedores1EjemplosPantalla(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.inventory_2_outlined),
+            title: const Text('Ejemplo con datos'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (context) => EjemploDatosPantalla(
+                    repository: ArticulosRepository(
+                      service: const ArticulosLocalService(),
+                    ),
+                  ),
                 ),
               );
             },
