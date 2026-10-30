@@ -5,13 +5,13 @@ enum VarianteImagenRuta { normal, panoramica }
 class ImagenRuta extends StatelessWidget {
   final String assetPath;
   final VarianteImagenRuta variante;
-  final String descripcionSemantica;
+  final String descripcion;
 
   const ImagenRuta({
     super.key,
     required this.assetPath,
     this.variante = VarianteImagenRuta.normal,
-    required this.descripcionSemantica,
+    required this.descripcion,
   });
 
   @override
@@ -20,7 +20,7 @@ class ImagenRuta extends StatelessWidget {
     final height = variante == VarianteImagenRuta.normal ? 180.0 : 120.0;
 
     return Semantics(
-      label: descripcionSemantica,
+      label: descripcion,
       image: true,
       child: SizedBox(
         width: width,

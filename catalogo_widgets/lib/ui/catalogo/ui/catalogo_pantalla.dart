@@ -1,3 +1,4 @@
+import 'package:catalogo_widget/ui/catalogo/ui/contenedores_1_ejemplos_pantalla.dart';
 import 'package:flutter/material.dart';
 
 import 'text_ejemplos_pantalla.dart';
@@ -84,6 +85,18 @@ class CatalogoPantalla extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute<void>(
                   builder: (context) => const ScaffoldEjemplosPantalla(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_box),
+            title: const Text('Contenedores'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (context) => const Contenedores1EjemplosPantalla(),
                 ),
               );
             },

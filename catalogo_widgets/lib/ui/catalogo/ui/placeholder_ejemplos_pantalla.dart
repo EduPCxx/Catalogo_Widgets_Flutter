@@ -11,7 +11,6 @@ class PlaceholderEjemplosPantalla extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: const [
-          EtiquetaCatalogo(texto: 'Ruta de la cascada'),
           SizedBox(height: 16),
           EtiquetaCatalogo(
             texto: 'Ruta de la cascada',
