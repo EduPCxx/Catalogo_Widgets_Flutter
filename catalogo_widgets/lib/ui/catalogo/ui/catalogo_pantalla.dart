@@ -1,4 +1,5 @@
 import 'package:catalogo_widget/ui/catalogo/ui/contenedores_1_ejemplos_pantalla.dart';
+import 'package:catalogo_widget/ui/inscripcion/ui/iscripcion_ejemplo_pantalla.dart';
 import 'package:flutter/material.dart';
 
 import 'text_ejemplos_pantalla.dart';
@@ -119,6 +120,15 @@ class CatalogoPantalla extends StatelessWidget {
                 ),
               );
             },
+          ),
+          ListTile(
+            leading: const Icon(Icons.login),
+            title: const Text('Login de demostración'),
+            onTap: () => Navigator.of(context).push<void>(
+              MaterialPageRoute<void>(
+                builder: (_) => const InscripcionEjemploPantalla(),
+              ),
+            ),
           ),
         ],
       ),
